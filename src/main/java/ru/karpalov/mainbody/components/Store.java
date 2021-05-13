@@ -2,8 +2,8 @@ package ru.karpalov.mainbody.components;
 
 public class Store {
     private int id;
-    private String StoreNumber;
-    private String RampNumber;
+    private String storeNumber;
+    private String rampNumber;
 
     public int getId() {
         return id;
@@ -14,33 +14,32 @@ public class Store {
     }
 
     public String getStoreNumber() {
-        return StoreNumber;
+        return storeNumber;
     }
 
     public void setStoreNumber(String storeNumber) {
-        StoreNumber = storeNumber;
+        storeNumber = storeNumber;
     }
 
     public String getRampNumber() {
-        return RampNumber;
+        return rampNumber;
     }
 
     public void setRampNumber(String rampNumber) {
-        RampNumber = rampNumber;
+        rampNumber = rampNumber;
     }
 
-    public Store(int id, String storeNumber, String rampNumber) {
-        this.id = id;
-        this.StoreNumber = storeNumber;
-        this.RampNumber = rampNumber;
+    public Store(String storeNumber, String rampNumber) {
+        this.storeNumber = storeNumber;
+        this.rampNumber = rampNumber;
     }
 
     @Override
     public String toString() {
         return "Store{" +
                 "id=" + id +
-                ", StoreNumber='" + StoreNumber + '\'' +
-                ", RampNumber='" + RampNumber + '\'' +
+                ", StoreNumber='" + storeNumber + '\'' +
+                ", RampNumber='" + rampNumber + '\'' +
                 '}';
     }
 
@@ -52,15 +51,15 @@ public class Store {
         Store store = (Store) o;
 
         if (id != store.id) return false;
-        if (StoreNumber != null ? !StoreNumber.equals(store.StoreNumber) : store.StoreNumber != null) return false;
-        return RampNumber != null ? RampNumber.equals(store.RampNumber) : store.RampNumber == null;
+        if (storeNumber != null ? !storeNumber.equals(store.storeNumber) : store.storeNumber != null) return false;
+        return rampNumber != null ? rampNumber.equals(store.rampNumber) : store.rampNumber == null;
     }
 
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + (StoreNumber != null ? StoreNumber.hashCode() : 0);
-        result = 31 * result + (RampNumber != null ? RampNumber.hashCode() : 0);
+        result = 31 * result + (storeNumber != null ? storeNumber.hashCode() : 0);
+        result = 31 * result + (rampNumber != null ? rampNumber.hashCode() : 0);
         return result;
     }
 
